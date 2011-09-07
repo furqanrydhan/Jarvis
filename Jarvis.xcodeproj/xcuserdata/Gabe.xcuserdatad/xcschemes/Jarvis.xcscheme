@@ -15,7 +15,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D1107260486CEB800E47090"
                BuildableName = "reader.app"
-               BlueprintName = "J.A.R.V.I.S"
+               BlueprintName = "Jarvis"
                ReferencedContainer = "container:Jarvis.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -37,15 +37,15 @@
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug">
-      <MacroExpansion>
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
             BuildableName = "reader.app"
-            BlueprintName = "J.A.R.V.I.S"
+            BlueprintName = "Jarvis"
             ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -61,7 +61,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
             BuildableName = "reader.app"
-            BlueprintName = "J.A.R.V.I.S"
+            BlueprintName = "Jarvis"
             ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
