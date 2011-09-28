@@ -26,7 +26,7 @@
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		0271667F0EF3761000B62633 /* Jarvis.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Jarvis.icns; sourceTree = "<group>"; };
 		0284C29F0EF2DCAC00ED044A /* Jarvis-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jarvis-Info.plist"; sourceTree = "<group>"; };
-		0284C2D70EF2DF6300ED044A /* reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0284C2D70EF2DF6300ED044A /* J.A.R.V.I.S..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J.A.R.V.I.S..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A397F30EF2E23900D22B79 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		02D6E63A0EF6C4630007BD01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
 		02DB3B5D0ECFEEDB00CBDC3A /* TextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextController.h; sourceTree = "<group>"; };
@@ -63,6 +63,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				02DB3B5E0ECFEEDB00CBDC3A /* TextController.m */,
+				02DB3B5D0ECFEEDB00CBDC3A /* TextController.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -88,7 +90,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0284C2D70EF2DF6300ED044A /* reader.app */,
+				0284C2D70EF2DF6300ED044A /* J.A.R.V.I.S..app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +103,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				02DB3B5D0ECFEEDB00CBDC3A /* TextController.h */,
-				02DB3B5E0ECFEEDB00CBDC3A /* TextController.m */,
-				0284C29F0EF2DCAC00ED044A /* Jarvis-Info.plist */,
 			);
 			name = reader;
 			sourceTree = "<group>";
@@ -120,6 +119,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0284C29F0EF2DCAC00ED044A /* Jarvis-Info.plist */,
 				0271667F0EF3761000B62633 /* Jarvis.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -160,7 +160,7 @@
 			name = Jarvis;
 			productInstallPath = "$(HOME)/Applications";
 			productName = reader;
-			productReference = 0284C2D70EF2DF6300ED044A /* reader.app */;
+			productReference = 0284C2D70EF2DF6300ED044A /* J.A.R.V.I.S..app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +245,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				PRODUCT_NAME = reader;
+				PRODUCT_NAME = J.A.R.V.I.S.;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -262,7 +262,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
-				PRODUCT_NAME = Jarvis;
+				PRODUCT_NAME = J.A.R.V.I.S.;
 				SDKROOT = macosx;
 			};
 			name = Release;
