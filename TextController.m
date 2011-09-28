@@ -10,10 +10,11 @@
 	[outText setNeedsDisplay:NO];
 	[self jarvis];
 }
+
 - (void)awakeFromNib
 {
 	NSLog(@"I have indeed been uploaded, sir. We're online and ready.");
-	[self setVolume:0.5];
+	//[self setVolume:0.8];
 	
 	synth = [[NSSpeechSynthesizer alloc] init];
 	[self jarvis];
@@ -24,21 +25,21 @@
   //////////////////////////////
 	// Personalization parameters:
 	// Zipcode  and location for US weather (play with the weather addresses below for non-US locations)
-	NSString * zipCode = @"02138";
-	NSString * locationName = @"Cambridge";
+	NSString * zipCode = @"213490";
+	NSString * locationName = @"Rome, Italy";
 	
 	// VIP names and email addresses
-	NSArray * vipNames = [NSArray arrayWithObjects: @"your wife", @"your father", @"your sister", @"Frank", nil];
+	NSArray * vipNames = [NSArray arrayWithObjects: @"GMail", @"Yahoo1", @"Yahoo", @"Me", nil];
 	NSArray * vipAddresses = [NSArray arrayWithObjects: \
-							  [NSArray arrayWithObjects: @"wife@work.com", @"wife@home.com", nil],\
-							  [NSArray arrayWithObjects: @"father@gmail.com", nil],\
-							  [NSArray arrayWithObjects: @"sister@yahoo.com", nil],\
-							  [NSArray arrayWithObjects: @"frank@mac.com", @"frank@school.edu", nil]\
+							  [NSArray arrayWithObjects: @"test@gmail.com", nil],\
+							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
+							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
+							  [NSArray arrayWithObjects: @"test@me.com", nil]\
 							  , nil];
 	
 	// Junecloud username and password for package tracking
-	NSString * packageUserName = @"myemail%40domain.com"; 
-	NSString * packagePassword = @"supersecretpassword";
+//	NSString * packageUserName = @"myemail%40domain.com"; 
+//	NSString * packagePassword = @"supersecretpassword";
   ////////////////////////////////
 
 	
@@ -197,7 +198,7 @@
 		else if (mailCount>1) text = [text stringByAppendingString:[NSString stringWithFormat:@"%d of them are from %@.\n", mailCount, [vipNames objectAtIndex:i]]];
 	}
 	text = [text stringByAppendingString:@"\n"];
-	
+	/*
 	//Package tracker
 	NSMutableURLRequest * packagePageRequest = [[NSMutableURLRequest alloc] init];
 	[packagePageRequest setURL: [NSURL URLWithString:@"https://junecloud.com/ds/"]];
@@ -244,7 +245,7 @@
 			
 		}
 	}
-	
+	*/
 	//Wikinews headlines
 	NSString * newsContent = [[NSString alloc] init];
 	NSString * newsEntry = [[NSString alloc] init];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A437B11433839800B261D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00A437AF1433839800B261D3 /* Credits.rtf */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
 		0263BA9A0EF2D87A0057205B /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263BA990EF2D87A0057205B /* CalendarStore.framework */; };
 		027166800EF3761000B62633 /* Jarvis.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0271667F0EF3761000B62633 /* Jarvis.icns */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A437B01433839800B261D3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		0271667F0EF3761000B62633 /* Jarvis.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Jarvis.icns; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				00A437AF1433839800B261D3 /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* reader */;
 			projectDirPath = "";
@@ -193,6 +197,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				0284C2C10EF2DE5B00ED044A /* Jarvis-Info.plist in Resources */,
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
+				00A437B11433839800B261D3 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +216,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		00A437AF1433839800B261D3 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00A437B01433839800B261D3 /* English */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
