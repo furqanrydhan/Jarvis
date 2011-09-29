@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0001C3451434DEB7004DBFCC /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0001C3431434DEB7004DBFCC /* About.xib */; };
 		0012ED411434737D0012A556 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 0012ED401434737D0012A556 /* TODO */; };
 		00A437B11433839800B261D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00A437AF1433839800B261D3 /* Credits.rtf */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0001C3441434DEB7004DBFCC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		0012ED401434737D0012A556 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
 		00A437B01433839800B261D3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
@@ -138,6 +140,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				00A437AF1433839800B261D3 /* Credits.rtf */,
+				0001C3431434DEB7004DBFCC /* About.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
 				00A437B11433839800B261D3 /* Credits.rtf in Resources */,
 				0012ED411434737D0012A556 /* TODO in Resources */,
+				0001C3451434DEB7004DBFCC /* About.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +232,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0001C3431434DEB7004DBFCC /* About.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0001C3441434DEB7004DBFCC /* English */,
+			);
+			name = About.xib;
+			sourceTree = "<group>";
+		};
 		00A437AF1433839800B261D3 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
