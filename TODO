@@ -1,3 +1,18 @@
-A TODO list for version 1.1
+A TODO list for version 1.0
 
-1.  to make it work
+To make it work
+
+0) to show the today events from iCal
+1) to add un update system, notification or the legacy apple update system
+2)To modify the way how to enter the zip code or the city for the weather
+3) To add a photo that will show the exact  weather (sunny=sun, rainy=cloud with drops)
+4) To add in the preference or at the opening of the app to enter the email address that i want to add.
+5) to add to preference the account and password for judecloud tracking system
+7) at opening of the app, the have the clock, weather spoken by the computer, late to add in the preferences which part to be spoken
+8) to integrate with thunderbird to know the unread/new e-mails received and for which account
+9) to make tabs for twitter/facebook
+10) to add a a google reader account?
+11) to add an link where to find the top 5/10 new stories
+12) to add a todo and a way to enter them
+13) to sync the todo list with Dropdox/Sugarsync other Todo services
+14) the startup/logged in time (the total processes running, etc)

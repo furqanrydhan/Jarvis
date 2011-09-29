@@ -22,11 +22,12 @@
 
 - (void)jarvis
 {	
-  //////////////////////////////
+ 
+    //////////////////////////////
 	// Personalization parameters:
 	// Zipcode  and location for US weather (play with the weather addresses below for non-US locations)
-	NSString * zipCode = @"213490";
-	NSString * locationName = @"Rome, Italy";
+//	NSString * zipCode = @"213490";
+//	NSString * locationName = @"Rome, Italy";
 	
 	// VIP names and email addresses
 	NSArray * vipNames = [NSArray arrayWithObjects: @"GMail", @"Yahoo1", @"Yahoo", @"Me", nil];
@@ -100,7 +101,7 @@
 		text = [text stringByAppendingString:[[tasks objectAtIndex:i] title]];
 		text = [text stringByAppendingString:@".\n"];
 	}
-	
+	/*
 	//Weather conditions
 	NSString * weatherText = [[NSString alloc] init];
 	NSString * weatherPage = [[NSString alloc] init];
@@ -156,6 +157,7 @@
 			}
 		}
 	}
+     */
 	//Unread email count
 	NSDictionary* errorDict;
     NSAppleEventDescriptor* returnDescriptor = NULL;
