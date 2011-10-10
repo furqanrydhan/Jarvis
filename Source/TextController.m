@@ -255,34 +255,34 @@
 	newsContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://en.wikinews.org/wiki/Template:Latest_news"] encoding: NSUTF8StringEncoding error:nil];
 	if(newsContent!=nil)
 	{
-		newsContent = [[newsContent componentsSeparatedByString:@"</h3>"] objectAtIndex:2];
-		allNews=@"";
+		newsContent = [[newsContent componentsSeparatedByString:@"</span>"] objectAtIndex:1];
+		 allNews=@"";
 		for(int i=0;i<[[newsContent componentsSeparatedByString:@"</a></li>"] count];i++)
 		{
 			newsEntry = [[[[newsContent componentsSeparatedByString:@"</a></li>"] objectAtIndex:i] componentsSeparatedByString:@"\">"] objectAtIndex:1];
-			if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<"])
+		//	if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<"])
 			{
 				allNews = [allNews stringByAppendingString:newsEntry];
 				allNews = [allNews stringByAppendingString:@".\n"];
 			}
 		}
-		if(allNews==@"")
+		/*if(allNews==@"")
 		{	
 			newsContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://en.wikinews.org/wiki/Template:Latest_news"] encoding: NSUTF8StringEncoding error:nil];
 			if(newsContent!=nil)
 			{
-				newsContent = [[newsContent componentsSeparatedByString:@"</h3>"] objectAtIndex:3];
+				newsContent = [[newsContent componentsSeparatedByString:@"</span>"] objectAtIndex:1];
 				for(int i=0;i<[[newsContent componentsSeparatedByString:@"</a></li>"] count];i++)
 				{
 					newsEntry = [[[[newsContent componentsSeparatedByString:@"</a></li>"] objectAtIndex:i] componentsSeparatedByString:@"\">"] objectAtIndex:1];
-					if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<"])
+					if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<li>"])
 					{
 						allNews = [allNews stringByAppendingString:newsEntry];
 						allNews = [allNews stringByAppendingString:@".\n"];
 					}
 				}
 			}
-		}
+		}*/
 		if(allNews!=@"")
 		{
 		text = [text stringByAppendingString:@"\nToday's headlines:\n"];
@@ -295,7 +295,7 @@
 	NSString * quoteContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://feeds.feedburner.com/brainyquote/QUOTEBR"] encoding: NSUTF8StringEncoding error:nil];
 	if(quoteContent!=nil)
 	{
-		text = [text stringByAppendingString:@"\nToday's quotation:\n"];
+		text = [text stringByAppendingString:@"\nToday's quotation from BrainyQuote.com:\n"];
 		text = [text stringByAppendingString:[[[[quoteContent componentsSeparatedByString:@"<description>"] objectAtIndex:3] componentsSeparatedByString:@"</description>"] objectAtIndex:0]];
 		text = [text stringByAppendingString:@"\n"];
 		text = [text stringByAppendingString:[[[[quoteContent componentsSeparatedByString:@"<title>"] objectAtIndex:3] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
@@ -309,7 +309,7 @@
 	[outText setTextColor:[NSColor colorWithDeviceWhite:0.95 alpha:1]];
 	[outText setString:text];
 	
-	[synth startSpeakingString:text];	
+//	[synth startSpeakingString:text];	//for speaking the text
 }
 
 //Copy-pasted from .arri
