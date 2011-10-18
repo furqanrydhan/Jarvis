@@ -309,7 +309,7 @@
 	[outText setTextColor:[NSColor colorWithDeviceWhite:0.95 alpha:1]];
 	[outText setString:text];
 	
-//	[synth startSpeakingString:text];	//for speaking the text
+	[synth startSpeakingString:text];	//for speaking the text
 }
 
 //Copy-pasted from .arri
