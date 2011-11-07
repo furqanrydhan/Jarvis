@@ -28,14 +28,6 @@
 		0001C3441434DEB7004DBFCC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		0012ED401434737D0012A556 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
 		0039C21C14350E9900829821 /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Changelog; path = ../Changelog; sourceTree = "<group>"; };
-		0056AF581442FCFB0023D53A /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ro-RO"; path = "/Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/ro-RO.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
-		0056AF591442FCFB0023D53A /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "ro-RO"; path = "/Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/ro-RO.lproj/Credits.rtf"; sourceTree = "<absolute>"; };
-		0056AF5A1442FCFB0023D53A /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "ro-RO"; path = "/Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/ro-RO.lproj/MainMenu.xib"; sourceTree = "<absolute>"; };
-		0056AF5B1442FCFB0023D53A /* ro-RO */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "ro-RO"; path = "/Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/ro-RO.lproj/About.xib"; sourceTree = "<absolute>"; };
-		0056AF5D1442FD020023D53A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = /Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/it.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
-		0056AF5E1442FD020023D53A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = it; path = /Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/it.lproj/Credits.rtf; sourceTree = "<absolute>"; };
-		0056AF5F1442FD020023D53A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = /Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/it.lproj/MainMenu.xib; sourceTree = "<absolute>"; };
-		0056AF601442FD020023D53A /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = /Users/Gabe/Desktop/Projects/GitHub/Jarvis/Source/it.lproj/About.xib; sourceTree = "<absolute>"; };
 		00A437B01433839800B261D3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
@@ -244,8 +236,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				0001C3441434DEB7004DBFCC /* English */,
-				0056AF5B1442FCFB0023D53A /* ro-RO */,
-				0056AF601442FD020023D53A /* it */,
 			);
 			name = About.xib;
 			sourceTree = "<group>";
@@ -254,8 +244,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				00A437B01433839800B261D3 /* English */,
-				0056AF591442FCFB0023D53A /* ro-RO */,
-				0056AF5E1442FD020023D53A /* it */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
@@ -264,8 +252,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
-				0056AF581442FCFB0023D53A /* ro-RO */,
-				0056AF5D1442FD020023D53A /* it */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -274,8 +260,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
-				0056AF5A1442FCFB0023D53A /* ro-RO */,
-				0056AF5F1442FD020023D53A /* it */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
