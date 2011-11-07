@@ -58,7 +58,7 @@
 	
 	text = [text stringByAppendingString:@"It is "];
 	if([date minuteOfHour]<10)
-		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:0%d.\n", [date hourOfDay], [date minuteOfHour]]];
+		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d.\n", [date hourOfDay], [date minuteOfHour]]];
 	else
 		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d.\n", [date hourOfDay], [date minuteOfHour]]];
 	
@@ -84,8 +84,8 @@
 			text = [text stringByAppendingString:[[events objectAtIndex:i] title]];
 			text= [text stringByAppendingString:@", at "];
 			NSCalendarDate *eventDate = [[[events objectAtIndex:i] startDate] dateWithCalendarFormat:nil timeZone:nil];
-			if([eventDate minuteOfHour]<10)
-				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:0%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
+			if([eventDate minuteOfHour]<20)
+				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
 			else
 				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
 		}
