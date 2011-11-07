@@ -248,6 +248,7 @@
 		}
 	}
 	*/
+    /*
 	//Wikinews headlines
 	NSString * newsContent = [[NSString alloc] init];
 	NSString * newsEntry = [[NSString alloc] init];
@@ -255,18 +256,18 @@
 	newsContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://en.wikinews.org/wiki/Template:Latest_news"] encoding: NSUTF8StringEncoding error:nil];
 	if(newsContent!=nil)
 	{
-		newsContent = [[newsContent componentsSeparatedByString:@"</span>"] objectAtIndex:1];
+		newsContent = [[newsContent componentsSeparatedByString:@"</span>"] objectAtIndex:3];
 		 allNews=@"";
 		for(int i=0;i<[[newsContent componentsSeparatedByString:@"</a></li>"] count];i++)
 		{
 			newsEntry = [[[[newsContent componentsSeparatedByString:@"</a></li>"] objectAtIndex:i] componentsSeparatedByString:@"\">"] objectAtIndex:1];
-		//	if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<"])
+			if(![newsEntry hasPrefix:@"Wikinews Shorts:"] && ![newsEntry hasPrefix:@"<"])
 			{
 				allNews = [allNews stringByAppendingString:newsEntry];
 				allNews = [allNews stringByAppendingString:@".\n"];
 			}
 		}
-		/*if(allNews==@"")
+		if(allNews==@"")
 		{	
 			newsContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://en.wikinews.org/wiki/Template:Latest_news"] encoding: NSUTF8StringEncoding error:nil];
 			if(newsContent!=nil)
@@ -282,16 +283,29 @@
 					}
 				}
 			}
-		}*/
+		}
 		if(allNews!=@"")
 		{
 		text = [text stringByAppendingString:@"\nToday's headlines:\n"];
 		text = [text stringByAppendingString:allNews];
 		}
+	}*/
+    
+	//NYTimes latest
+    
+    NSString * quoteContent1 = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://feeds.nytimes.com/nyt/rss/HomePage"] encoding: NSUTF8StringEncoding error:nil];
+	if(quoteContent1!=nil)
+	{
+		text = [text stringByAppendingString:@"\nToday's Headlines from NYT:\n"];
+		text = [text stringByAppendingString:[[[[quoteContent1 componentsSeparatedByString:@"<title>"] objectAtIndex:3] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
+        //text = [text stringByAppendingString:[[[[quoteContent componentsSeparatedByString:@"<link>"] objectAtIndex:3] componentsSeparatedByString:@"</link>"] objectAtIndex:0]];
+		text = [text stringByAppendingString:@"\n"];
+		text = [text stringByAppendingString:[[[[quoteContent1 componentsSeparatedByString:@"<title>"] objectAtIndex:4] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
+		text = [text stringByAppendingString:@".\n"];
 	}
-	
+    
 	//Daily quotation
-	
+
 	NSString * quoteContent = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://feeds.feedburner.com/brainyquote/QUOTEBR"] encoding: NSUTF8StringEncoding error:nil];
 	if(quoteContent!=nil)
 	{
