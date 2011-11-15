@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0001C3451434DEB7004DBFCC /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0001C3431434DEB7004DBFCC /* About.xib */; };
-		0012ED411434737D0012A556 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = 0012ED401434737D0012A556 /* TODO */; };
-		0039C21D14350E9900829821 /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = 0039C21C14350E9900829821 /* Changelog */; };
 		00A437B11433839800B261D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00A437AF1433839800B261D3 /* Credits.rtf */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
 		0263BA9A0EF2D87A0057205B /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263BA990EF2D87A0057205B /* CalendarStore.framework */; };
@@ -26,8 +24,6 @@
 
 /* Begin PBXFileReference section */
 		0001C3441434DEB7004DBFCC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
-		0012ED401434737D0012A556 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
-		0039C21C14350E9900829821 /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Changelog; path = ../Changelog; sourceTree = "<group>"; };
 		00A437B01433839800B261D3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
@@ -69,8 +65,6 @@
 		008295C914347235000C13EC /* Other Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0039C21C14350E9900829821 /* Changelog */,
-				0012ED401434737D0012A556 /* TODO */,
 			);
 			name = "Other Resources";
 			sourceTree = "<group>";
@@ -211,9 +205,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
 				00A437B11433839800B261D3 /* Credits.rtf in Resources */,
-				0012ED411434737D0012A556 /* TODO in Resources */,
 				0001C3451434DEB7004DBFCC /* About.xib in Resources */,
-				0039C21D14350E9900829821 /* Changelog in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +318,9 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -342,7 +336,7 @@
 				C01FCF4C08A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Jarvis" */ = {
 			isa = XCConfigurationList;
@@ -351,7 +345,7 @@
 				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

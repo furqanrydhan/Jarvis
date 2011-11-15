@@ -32,7 +32,7 @@
 	// VIP names and email addresses
 	NSArray * vipNames = [NSArray arrayWithObjects: @"GMail", @"Yahoo1", @"Yahoo", @"Me", nil];
 	NSArray * vipAddresses = [NSArray arrayWithObjects: \
-							  [NSArray arrayWithObjects: @"test@gmail.com", nil],\
+							  [NSArray arrayWithObjects: @"ulicigabriel@gmail.com", nil],\
 							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
 							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
 							  [NSArray arrayWithObjects: @"test@me.com", nil]\
@@ -67,17 +67,20 @@
 	text = [text stringByAppendingString:[NSString stringWithFormat:@" %d, ", [date dayOfMonth]]];
 	text = [text stringByAppendingString:[[dateFormatter standaloneWeekdaySymbols] objectAtIndex:[date dayOfWeek]%7]];
 	text = [text stringByAppendingString:@".\n\n"];
-	
-	//iCal events
+
+    //iCal events
+    text = [text stringByAppendingString:@"\n"];
+    text = [text stringByAppendingString:@"iCal Events: \n"];
 	NSCalendarDate *endDate = [[NSCalendarDate dateWithYear:[date yearOfCommonEra] month:[date monthOfYear] day:[date dayOfMonth] hour:23 minute:59 second:59 timeZone:nil] retain];
 	NSPredicate *predicate = [CalCalendarStore eventPredicateWithStartDate:date endDate:endDate calendars:[[CalCalendarStore defaultCalendarStore] calendars]];
 	NSArray *events = [[CalCalendarStore defaultCalendarStore] eventsWithPredicate:predicate];
 	for(int i=0; i<[events count]; i++)
 	{
+        
 		if([[events objectAtIndex:i] isAllDay])
 		{
 			text = [text stringByAppendingString:[[events objectAtIndex:i] title]];
-		}
+        }
 		else
 		{
 			text = [text stringByAppendingString:@"There is, "];
@@ -91,8 +94,11 @@
 		}
 		text = [text stringByAppendingString:@".\n"];
 	}
-	
-	//iCal to-do
+
+    //iCal to-do
+	text = [text stringByAppendingString:@"\n"];
+    text = [text stringByAppendingString:@"To-Do`s: \n"];
+    
 	predicate = [CalCalendarStore taskPredicateWithCalendars:[[CalCalendarStore defaultCalendarStore] calendars]];
 	NSArray *tasks = [[CalCalendarStore defaultCalendarStore] tasksWithPredicate:predicate];
 	for(int i=0; i<[tasks count]; i++)
