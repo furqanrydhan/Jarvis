@@ -32,7 +32,7 @@
 	// VIP names and email addresses
 	NSArray * vipNames = [NSArray arrayWithObjects: @"GMail", @"Yahoo1", @"Yahoo", @"Me", nil];
 	NSArray * vipAddresses = [NSArray arrayWithObjects: \
-							  [NSArray arrayWithObjects: @"ulicigabriel@gmail.com", nil],\
+							  [NSArray arrayWithObjects: @"test@gmail.com", nil],\
 							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
 							  [NSArray arrayWithObjects: @"test@yahoo.com", nil],\
 							  [NSArray arrayWithObjects: @"test@me.com", nil]\
@@ -58,7 +58,7 @@
 	
 	text = [text stringByAppendingString:@"It is "];
 	if([date minuteOfHour]<10)
-		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d.\n", [date hourOfDay], [date minuteOfHour]]];
+		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:0%d.\n", [date hourOfDay], [date minuteOfHour]]];
 	else
 		text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d.\n", [date hourOfDay], [date minuteOfHour]]];
 	
@@ -87,7 +87,7 @@
 			text = [text stringByAppendingString:[[events objectAtIndex:i] title]];
 			text= [text stringByAppendingString:@", at "];
 			NSCalendarDate *eventDate = [[[events objectAtIndex:i] startDate] dateWithCalendarFormat:nil timeZone:nil];
-			if([eventDate minuteOfHour]<20)
+			if([eventDate minuteOfHour]<10)
 				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
 			else
 				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
@@ -97,7 +97,7 @@
 
     //iCal to-do
 	text = [text stringByAppendingString:@"\n"];
-    text = [text stringByAppendingString:@"To-Do`s: \n"];
+    text = [text stringByAppendingString:@"To Do's: \n"];
     
 	predicate = [CalCalendarStore taskPredicateWithCalendars:[[CalCalendarStore defaultCalendarStore] calendars]];
 	NSArray *tasks = [[CalCalendarStore defaultCalendarStore] tasksWithPredicate:predicate];

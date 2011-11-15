@@ -40,7 +40,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="608870630">
 						<reference key="NSMenu" ref="99326121"/>
-						<string key="NSTitle">J.A.R.V.I.S</string>
+						<string key="NSTitle">Jarvis</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -54,12 +54,13 @@
 						</object>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="1005718808">
-							<string key="NSTitle">J.A.R.V.I.S</string>
+							<string key="NSTitle">Jarvis</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="535581010">
 									<reference key="NSMenu" ref="1005718808"/>
-									<string key="NSTitle">About J.A.R.V.I.S</string>
-									<string key="NSKeyEquiv"/>
+									<string key="NSTitle">About Jarvis</string>
+									<string key="NSKeyEquiv">/</string>
+									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="573851146"/>
 									<reference key="NSMixedImage" ref="786947076"/>
@@ -87,7 +88,8 @@
 								<object class="NSMenuItem" id="80338039">
 									<reference key="NSMenu" ref="1005718808"/>
 									<string key="NSTitle">Check for Updates...</string>
-									<string key="NSKeyEquiv"/>
+									<string key="NSKeyEquiv">.</string>
+									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="573851146"/>
 									<reference key="NSMixedImage" ref="786947076"/>
@@ -131,7 +133,7 @@
 								</object>
 								<object class="NSMenuItem" id="1015152412">
 									<reference key="NSMenu" ref="1005718808"/>
-									<string key="NSTitle">Hide J.A.R.V.I.S</string>
+									<string key="NSTitle">Hide Jarvis</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -169,7 +171,7 @@
 								</object>
 								<object class="NSMenuItem" id="925173476">
 									<reference key="NSMenu" ref="1005718808"/>
-									<string key="NSTitle">Quit J.A.R.V.I.S</string>
+									<string key="NSTitle">Quit Jarvis</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1085,7 +1087,7 @@
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="175998074">
 									<reference key="NSMenu" ref="30144422"/>
-									<string key="NSTitle">J.A.R.V.I.S Help</string>
+									<string key="NSTitle">Jarvis Help</string>
 									<string key="NSKeyEquiv">?</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -1126,7 +1128,6 @@
 							</set>
 							<string key="NSFrame">{{-14, 139}, {126, 104}}</string>
 							<reference key="NSSuperview" ref="21237042"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="408506643"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="692614947">
@@ -1153,7 +1154,6 @@
 							<int key="NSvFlags">268</int>
 							<string key="NSFrame">{{153, 20}, {175, 17}}</string>
 							<reference key="NSSuperview" ref="21237042"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="942728218">
@@ -1185,7 +1185,6 @@
 					</array>
 					<string key="NSFrame">{{7, 11}, {480, 270}}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="847780754"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
@@ -1242,7 +1241,7 @@
 							<reference ref="21237042"/>
 						</array>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">About - J.A.R.V.I.S.</string>
+						<string key="objectName">About - Jarvis</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">822</int>
@@ -1342,7 +1341,7 @@
 							<reference ref="1005718808"/>
 						</array>
 						<reference key="parent" ref="99326121"/>
-						<string key="objectName">Menu Item - J.A.RV.I.S</string>
+						<string key="objectName">Menu Item - Jarvis</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">834</int>
@@ -1466,7 +1465,7 @@
 						<int key="objectID">852</int>
 						<reference key="object" ref="535581010"/>
 						<reference key="parent" ref="1005718808"/>
-						<string key="objectName">Menu Item - About J.A.R.V.I.S</string>
+						<string key="objectName">Menu Item - About Jarvis</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">853</int>

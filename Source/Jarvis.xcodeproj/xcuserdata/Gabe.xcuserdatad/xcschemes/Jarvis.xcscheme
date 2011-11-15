@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D1107260486CEB800E47090"
-               BuildableName = "J.A.R.V.I.S..app"
+               BuildableName = "Jarvis.app"
                BlueprintName = "Jarvis"
                ReferencedContainer = "container:Jarvis.xcodeproj">
             </BuildableReference>
@@ -41,7 +41,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "J.A.R.V.I.S..app"
+            BuildableName = "Jarvis.app"
             BlueprintName = "Jarvis"
             ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D1107260486CEB800E47090"
-            BuildableName = "J.A.R.V.I.S..app"
+            BuildableName = "Jarvis.app"
             BlueprintName = "Jarvis"
             ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
