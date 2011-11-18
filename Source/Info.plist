@@ -30,12 +30,10 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>NSServices</key>
-	<array/>
 	<key>SUEnableSystemProfiling</key>
 	<string>NO</string>
 	<key>SUFeedURL</key>
-	<string>http://dl.dropbox.com/u/5765080/Jarvis/Appcast.xml</string>
+	<string>http://dl.dropbox.com/u/5765080/Jarvis/appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 	<key>UTExportedTypeDeclarations</key>

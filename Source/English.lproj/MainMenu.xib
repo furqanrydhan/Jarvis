@@ -1140,10 +1140,10 @@
 				<string key="NSClassName">TextController</string>
 			</object>
 			<object class="NSWindowTemplate" id="668684289">
-				<int key="NSWindowStyleMask">8223</int>
+				<int key="NSWindowStyleMask">8221</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{200, 200}, {500, 500}}</string>
-				<int key="NSWTFlags">603979776</int>
+				<string key="NSWindowRect">{{462, 200}, {500, 500}}</string>
+				<int key="NSWTFlags">-1543503872</int>
 				<string key="NSWindowTitle">Jarvis</string>
 				<string key="NSWindowClass">NSPanel</string>
 				<nil key="NSViewClass"/>
@@ -1295,7 +1295,7 @@
 							<reference key="NSSuperview" ref="239660126"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="525292548"/>
-							<int key="NSsFlags">2</int>
+							<int key="NSsFlags">514</int>
 							<reference key="NSVScroller" ref="525292548"/>
 							<reference key="NSHScroller" ref="1006829030"/>
 							<reference key="NSContentView" ref="703888488"/>
@@ -1456,7 +1456,7 @@
 							<string key="NSFrame">{{125, 55}, {170, 187}}</string>
 							<reference key="NSSuperview" ref="140252762"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="855442158"/>
+							<reference key="NSNextKeyView" ref="525519329"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="1043591848">
 								<int key="NSCellFlags">68288064</int>
@@ -1466,6 +1466,24 @@ b2JvZHkKCldpdGggc3BlY2lhbCB0aGFua3MgdG86CglwaHlzaWNpc3RqZWRpCgpJY29uOgoJWWVsbG93
 IEljb24</string>
 								<reference key="NSSupport" ref="384255267"/>
 								<reference key="NSControlView" ref="285896613"/>
+								<reference key="NSBackgroundColor" ref="660928075"/>
+								<reference key="NSTextColor" ref="1017987803"/>
+							</object>
+						</object>
+						<object class="NSTextField" id="525519329">
+							<reference key="NSNextResponder" ref="140252762"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{162, 31}, {77, 17}}</string>
+							<reference key="NSSuperview" ref="140252762"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="855442158"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="586991062">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents">Version 0.2</string>
+								<reference key="NSSupport" ref="384255267"/>
+								<reference key="NSControlView" ref="525519329"/>
 								<reference key="NSBackgroundColor" ref="660928075"/>
 								<reference key="NSTextColor" ref="1017987803"/>
 							</object>
@@ -3044,6 +3062,7 @@ IEljb24</string>
 							<reference ref="620402103"/>
 							<reference ref="855442158"/>
 							<reference ref="285896613"/>
+							<reference ref="525519329"/>
 						</object>
 						<reference key="parent" ref="970342089"/>
 					</object>
@@ -3088,6 +3107,20 @@ IEljb24</string>
 						<int key="objectID">737</int>
 						<reference key="object" ref="1043591848"/>
 						<reference key="parent" ref="285896613"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">740</int>
+						<reference key="object" ref="525519329"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="586991062"/>
+						</object>
+						<reference key="parent" ref="140252762"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">741</int>
+						<reference key="object" ref="586991062"/>
+						<reference key="parent" ref="525519329"/>
 					</object>
 				</object>
 			</object>
@@ -3307,6 +3340,7 @@ IEljb24</string>
 					<string>714.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>72.ImportedFromIB2</string>
+					<string>724.IBPluginDependency</string>
 					<string>726.IBPluginDependency</string>
 					<string>726.NSWindowTemplate.visibleAtLaunch</string>
 					<string>727.IBPluginDependency</string>
@@ -3320,6 +3354,8 @@ IEljb24</string>
 					<string>737.IBPluginDependency</string>
 					<string>74.IBPluginDependency</string>
 					<string>74.ImportedFromIB2</string>
+					<string>740.IBPluginDependency</string>
+					<string>741.IBPluginDependency</string>
 					<string>75.IBPluginDependency</string>
 					<string>75.ImportedFromIB2</string>
 					<string>77.IBPluginDependency</string>
@@ -3555,6 +3591,7 @@ IEljb24</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="NO"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3567,6 +3604,8 @@ IEljb24</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3600,7 +3639,7 @@ IEljb24</string>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">737</int>
+			<int key="maxID">741</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
