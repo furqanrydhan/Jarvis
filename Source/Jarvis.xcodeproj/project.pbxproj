@@ -39,6 +39,9 @@
 /* Begin PBXFileReference section */
 		001976901475820E003C43BE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		001976951475866C003C43BE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		008D3A2614769BB800D907BC /* Bugs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Bugs; path = ../Bugs; sourceTree = "<group>"; };
+		008D3A2714769BB800D907BC /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Changelog; path = ../Changelog; sourceTree = "<group>"; };
+		008D3A2814769BB800D907BC /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		0271667F0EF3761000B62633 /* Jarvis.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Jarvis.icns; sourceTree = "<group>"; };
@@ -149,6 +152,9 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				008D3A2614769BB800D907BC /* Bugs */,
+				008D3A2714769BB800D907BC /* Changelog */,
+				008D3A2814769BB800D907BC /* TODO */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
