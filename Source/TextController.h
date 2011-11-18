@@ -10,6 +10,7 @@
 	IBOutlet id window;
 }
 - (IBAction)update:(id)sender;
+- (IBAction)Homepage:(id)sender;
 - (void)jarvis;
 - (void)setVolume:(float)involume;
 

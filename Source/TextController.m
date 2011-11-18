@@ -11,6 +11,10 @@
 	[self jarvis];
 }
 
+- (IBAction)Homepage:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://gabrielulici.github.com/Jarvis/"]];
+}
+
 - (void)awakeFromNib
 {
 	NSLog(@"I have indeed been uploaded, sir. We're online and ready.");
@@ -19,6 +23,7 @@
 	synth = [[NSSpeechSynthesizer alloc] init];
 	[self jarvis];
 }
+
 
 - (void)jarvis
 {	
