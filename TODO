@@ -1,8 +1,11 @@
 A TODO list
 
-a) Bugs
-1) Crashes if Mail app has no email setup. 
-2)
+a) Important/Urgent
+
+1) fix the weather 
+2) test/fix the tracking 
+3) 
+
 
 b) Features
 
@@ -11,7 +14,7 @@ b) Features
 3) to make tabs for twitter/facebook
 4) to sync the todo list with Dropdox/Sugarsync other Todo services
 5) the startup/logged in time (the total processes running, etc)
-6) if there are no iCal events or To Do`s then it will be written that
+6) if there are no iCal events or To Do`s then it will be written that there are non
 7)
 8)
 
@@ -29,7 +32,7 @@ c) Preferences pane
 d) Unknown
 
 1) to add in the preference or at the opening of the app to enter the email address that i want to add.
-2)
+2) to add a version number in the about windows, that will read automatically the version of the app.
 3)
 4)
 5)
