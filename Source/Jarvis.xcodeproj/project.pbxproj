@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0001C3451434DEB7004DBFCC /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0001C3431434DEB7004DBFCC /* About.xib */; };
-		00A437B11433839800B261D3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 00A437AF1433839800B261D3 /* Credits.rtf */; };
+		001976911475820E003C43BE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
+		0019769414758296003C43BE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
+		001976961475866C003C43BE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 001976951475866C003C43BE /* dsa_pub.pem */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
 		0263BA9A0EF2D87A0057205B /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263BA990EF2D87A0057205B /* CalendarStore.framework */; };
 		027166800EF3761000B62633 /* Jarvis.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0271667F0EF3761000B62633 /* Jarvis.icns */; };
@@ -22,9 +23,22 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0019769314758281003C43BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0019769414758296003C43BE /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0001C3441434DEB7004DBFCC /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
-		00A437B01433839800B261D3 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
+		001976901475820E003C43BE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		001976951475866C003C43BE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		0271667F0EF3761000B62633 /* Jarvis.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Jarvis.icns; sourceTree = "<group>"; };
@@ -56,6 +70,7 @@
 				02A397F40EF2E23900D22B79 /* WebKit.framework in Frameworks */,
 				02D6E63B0EF6C4630007BD01 /* SystemConfiguration.framework in Frameworks */,
 				0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */,
+				001976911475820E003C43BE /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +144,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				001976951475866C003C43BE /* dsa_pub.pem */,
 				0271667F0EF3761000B62633 /* Jarvis.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				00A437AF1433839800B261D3 /* Credits.rtf */,
-				0001C3431434DEB7004DBFCC /* About.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -142,6 +156,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				001976901475820E003C43BE /* Sparkle.framework */,
 				0227F9280F093CC700A75670 /* CoreAudio.framework */,
 				02D6E63A0EF6C4630007BD01 /* SystemConfiguration.framework */,
 				02A397F30EF2E23900D22B79 /* WebKit.framework */,
@@ -163,6 +178,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				0019769314758281003C43BE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -204,8 +220,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
-				00A437B11433839800B261D3 /* Credits.rtf in Resources */,
-				0001C3451434DEB7004DBFCC /* About.xib in Resources */,
+				001976961475866C003C43BE /* dsa_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,22 +239,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0001C3431434DEB7004DBFCC /* About.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0001C3441434DEB7004DBFCC /* English */,
-			);
-			name = About.xib;
-			sourceTree = "<group>";
-		};
-		00A437AF1433839800B261D3 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				00A437B01433839800B261D3 /* English */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -265,6 +264,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -285,6 +288,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = reader_Prefix.pch;

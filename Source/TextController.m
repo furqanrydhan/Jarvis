@@ -112,7 +112,7 @@
 	NSString * weatherText = [[NSString alloc] init];
 	NSString * weatherPage = [[NSString alloc] init];
 	NSString * weatherContent = [[NSString alloc] init];
-	weatherPage = [NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.accuweather.com/index-forecast-us.asp?partner=accuweather&zipcode=%@&metric=1",zipCode]] encoding: NSUTF8StringEncoding error:nil];
+	weatherPage = [NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.accuweather.com/en-us/it/lazio/rome/quick-look.aspx?cityid=",zipCode]] encoding: NSUTF8StringEncoding error:nil];
 	weatherContent = weatherPage;
 	if(weatherContent!=nil)
 	{
@@ -125,7 +125,7 @@
 		text = [text stringByAppendingString:@" degrees.\n"];
 		}
 	}
-	weatherPage = [NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.accuweather.com/forecast.asp?partner=accuweather&zipcode=%@&metric=1",zipCode]] encoding: NSUTF8StringEncoding error:nil];
+	weatherPage = [NSString stringWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.accuweather.com/en-us/it/lazio/rome/quick-look.aspx?cityid=",zipCode]] encoding: NSUTF8StringEncoding error:nil];
 	weatherContent = weatherPage;
 	if(weatherContent!=nil)
 	{
