@@ -10,6 +10,7 @@
 		001976911475820E003C43BE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
 		0019769414758296003C43BE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
 		001976961475866C003C43BE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 001976951475866C003C43BE /* dsa_pub.pem */; };
+		00A32EF914790FEF00BC1EB2 /* JarvisHelp in Resources */ = {isa = PBXBuildFile; fileRef = 00A32EF814790FEF00BC1EB2 /* JarvisHelp */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
 		0263BA9A0EF2D87A0057205B /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263BA990EF2D87A0057205B /* CalendarStore.framework */; };
 		027166800EF3761000B62633 /* Jarvis.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0271667F0EF3761000B62633 /* Jarvis.icns */; };
@@ -42,6 +43,7 @@
 		008D3A2614769BB800D907BC /* Bugs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Bugs; path = ../Bugs; sourceTree = "<group>"; };
 		008D3A2714769BB800D907BC /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Changelog; path = ../Changelog; sourceTree = "<group>"; };
 		008D3A2814769BB800D907BC /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
+		00A32EF814790FEF00BC1EB2 /* JarvisHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JarvisHelp; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
 		0271667F0EF3761000B62633 /* Jarvis.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Jarvis.icns; sourceTree = "<group>"; };
@@ -127,8 +129,8 @@
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				008295C914347235000C13EC /* Other Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -155,6 +157,7 @@
 				008D3A2614769BB800D907BC /* Bugs */,
 				008D3A2714769BB800D907BC /* Changelog */,
 				008D3A2814769BB800D907BC /* TODO */,
+				00A32EF814790FEF00BC1EB2 /* JarvisHelp */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
 				001976961475866C003C43BE /* dsa_pub.pem in Resources */,
+				00A32EF914790FEF00BC1EB2 /* JarvisHelp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

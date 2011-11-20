@@ -1,8 +1,17 @@
 Jarvis
 
+Release 0.3
+
+- Added Homepage menu item
+- Added Change Log menu item
+- Added Report an issue menu item
+- Added Help menu item
+
 Release 0.2
 
 - Sparkle framework (update system)
+- Added an about windows
+- some minor changes in the code
 
 Release 0.1
 

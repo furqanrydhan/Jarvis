@@ -11,6 +11,8 @@
 }
 - (IBAction)update:(id)sender;
 - (IBAction)Homepage:(id)sender;
+- (IBAction)Issue:(id)sender;
+- (IBAction)ChangeLog:(id)sender;
 - (void)jarvis;
 - (void)setVolume:(float)involume;
 

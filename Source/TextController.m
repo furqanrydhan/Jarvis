@@ -15,6 +15,14 @@
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://gabrielulici.github.com/Jarvis/"]];
 }
 
+- (IBAction)Issue:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"https://github.com/GabrielUlici/Jarvis/issues"]];
+}
+
+- (IBAction)ChangeLog:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://dl.dropbox.com/u/5765080/Jarvis/Release%20Notes/ChangeLog.html"]];
+}
+
 - (void)awakeFromNib
 {
 	NSLog(@"I have indeed been uploaded, sir. We're online and ready.");
@@ -307,7 +315,7 @@
     NSString * quoteContent1 = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://feeds.nytimes.com/nyt/rss/HomePage"] encoding: NSUTF8StringEncoding error:nil];
 	if(quoteContent1!=nil)
 	{
-		text = [text stringByAppendingString:@"\nToday's Headlines from NYT:\n"];
+		text = [text stringByAppendingString:@"\nToday's Headlines from NYTimes:\n"];
 		text = [text stringByAppendingString:[[[[quoteContent1 componentsSeparatedByString:@"<title>"] objectAtIndex:3] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
         //text = [text stringByAppendingString:[[[[quoteContent componentsSeparatedByString:@"<link>"] objectAtIndex:3] componentsSeparatedByString:@"</link>"] objectAtIndex:0]];
 		text = [text stringByAppendingString:@"\n"];

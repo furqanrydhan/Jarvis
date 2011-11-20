@@ -8,6 +8,10 @@
 	<array/>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleHelpBookFolder</key>
+	<string>JarvisHelp</string>
+	<key>CFBundleHelpBookName</key>
+	<string>Jarvis Help</string>
 	<key>CFBundleIconFile</key>
 	<string>Jarvis.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -23,7 +27,7 @@
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>0.2</string>
+	<string>0.3</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>NSHumanReadableCopyright</key>
