@@ -1,6 +1,8 @@
 Jarvis for Mac OS X
 
-This is a work in progress some stuff are not working. I hope i will have time to fix them.
+This is a work in progress.
+Some stuff are not working and I hope i will have time to fix them.
+Check the ChangeLog file to see what is working.
 
 The code is written by physicistjedi i just upload it to Github.
 The original page http://physicistjedi.deviantart.com/art/Jarvis-1-0-106307065
@@ -15,6 +17,9 @@ This my morning alarm clock. Design question here is not how it looks like, or h
 * Location of tracked packages
 * News headlines
 * Daily quotations
+
 For obvious reasons it is called Jarvis.
 
 Icon by Yellow Icon
+
+Minimum Mac OS X version is 10.5 Leopard
