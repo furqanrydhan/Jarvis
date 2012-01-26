@@ -1,5 +1,5 @@
 #import <Cocoa/Cocoa.h>
-#import "TextController.h"
+#import "MainController.h"
 
 int main(int argc, char *argv[])
 {	

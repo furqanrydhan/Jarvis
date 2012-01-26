@@ -22,14 +22,18 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.4</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>0.3</string>
+	<string>4A</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 1987-2011 BuHuHu Inc.</string>
 	<key>NSMainNibFile</key>
@@ -42,13 +46,11 @@
 	<string>http://dl.dropbox.com/u/5765080/Jarvis/appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
 	<key>UTExportedTypeDeclarations</key>
 	<array/>
 	<key>UTImportedTypeDeclarations</key>
 	<array/>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.5</string>
-	<key>UIRequiresPersistentWiFi</key>
-	<true/>
 </dict>
 </plist>

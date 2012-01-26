@@ -5,6 +5,7 @@ a) Important/Urgent
 1) fix the weather 
 2) test/fix the tracking 
 3) to make a better rss feed reader
+4) to separate everything in little parts.
 
 
 b) Features
@@ -15,7 +16,7 @@ b) Features
 4) to sync the todo list with Dropdox/Sugarsync other Todo services
 5) the startup/logged in time (the total processes running, etc)
 6) if there are no iCal events or To Do`s then it will be written that there are non
-7) to add a feature similar to Siri for Iphone or to try to import Siri functionality 
+7) to add a feature similar to Siri for iPhone or to try to import Siri functionality 
 8)
 
 c) Preferences pane
@@ -24,7 +25,7 @@ c) Preferences pane
 2) to add to preference the account and password for judecloud tracking system
 3) to add in the preferences which part to be spoken
 4) to add an link where to find the top 5/10 new stories
-5) to add a todo account or from wher to read them and a way to enter them
+5) to add a todo account or from where to read them and a way to enter them
 6)
 7)
 8)
@@ -32,7 +33,6 @@ c) Preferences pane
 d) Unknown
 
 1) to add in the preference or at the opening of the app to enter the email address that i want to add.
-2) to add a version number in the about windows, that will read automatically the version of the app.
-3) To change the texture of the window
+2) To change the texture of the window
+3)
 4)
-5)

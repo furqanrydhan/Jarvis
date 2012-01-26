@@ -1,4 +1,7 @@
-#import "TextController.h"
+#import "MainController.h"
+
+
+NSSpeechSynthesizer *synth;
 
 @implementation TextController
 - (IBAction)update:(id)sender;
@@ -20,7 +23,46 @@
 }
 
 - (IBAction)ChangeLog:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://dl.dropbox.com/u/5765080/Jarvis/Release%20Notes/ChangeLog.html"]];
+    
+    if (! myChangeLogController ) {
+		myChangeLogController	= [[ChangeLogController alloc] init];
+	} // end if
+	
+	[myChangeLogController showWindow:self];
+     
+    NSApplication *thisApp = [NSApplication sharedApplication];
+    [thisApp activateIgnoringOtherApps:YES];
+    [[myChangeLogController window] makeKeyAndOrderFront:self];
+    
+    
+}
+
+- (IBAction)showTheWindow:(id)pId {
+
+	if (! myAboutController ) {
+		myAboutController	= [[AboutController alloc] init];
+	} // end if
+	
+	[myAboutController showWindow:self];
+    
+}
+
+
+- (IBAction)showPreferencesWindows:(id)sender {
+    /*
+    NSWindow * window = [myPreferencesController window];
+    if (![window isVisible])
+        [window center];
+    
+    [window makeKeyAndOrderFront: nil];
+    */
+    
+    if (! myPreferencesController ) {
+		myPreferencesController	= [[PreferencesController alloc] init];
+	} // end if
+	
+	[myPreferencesController showWindow:self];
+    
 }
 
 - (void)awakeFromNib
@@ -390,4 +432,5 @@
 	if(noErr!=err) NSLog(@"error setting volume of channel %d",channels[1]);
 	
 }
+
 @end

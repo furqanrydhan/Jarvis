@@ -1,4 +1,10 @@
-Jarvis
+Release 0.4
+
+- Modify the Change Log menu to show a local file
+- Added Preference windows
+- Added Version number to the About window
+- Added Support for Lion (10.7) and Xcode 4.2.1
+- Added License window.
 
 Release 0.3
 
@@ -10,7 +16,7 @@ Release 0.3
 Release 0.2
 
 - Sparkle framework (update system)
-- Added an about windows
+- Added an About windows
 - some minor changes in the code
 
 Release 0.1

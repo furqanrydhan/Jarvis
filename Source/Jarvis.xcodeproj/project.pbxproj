@@ -3,20 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0014064814840AC100168F25 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0014064714840AC100168F25 /* Preferences.xib */; };
+		0014064B14840E0600168F25 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0014064A14840E0600168F25 /* PreferencesController.m */; };
 		001976911475820E003C43BE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
 		0019769414758296003C43BE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 001976901475820E003C43BE /* Sparkle.framework */; };
 		001976961475866C003C43BE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 001976951475866C003C43BE /* dsa_pub.pem */; };
+		002624FB14BE27DF000FEECB /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 002624FA14BE27DF000FEECB /* COPYING */; };
+		005AA41D148404AC00D52CB8 /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 005AA41C148404AC00D52CB8 /* About.xib */; };
+		005AA4211484053300D52CB8 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005AA4201484053300D52CB8 /* AboutController.m */; };
+		008B298314D1CED400C0C68F /* Changelog in Resources */ = {isa = PBXBuildFile; fileRef = 008B298214D1CED400C0C68F /* Changelog */; };
+		00A2327714D1BDA900586744 /* ChangeLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A2327614D1BDA900586744 /* ChangeLogController.m */; };
+		00A2327914D1BDF300586744 /* ChangeLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A2327814D1BDF300586744 /* ChangeLog.xib */; };
 		00A32EF914790FEF00BC1EB2 /* JarvisHelp in Resources */ = {isa = PBXBuildFile; fileRef = 00A32EF814790FEF00BC1EB2 /* JarvisHelp */; };
 		0227F9290F093CC700A75670 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227F9280F093CC700A75670 /* CoreAudio.framework */; };
 		0263BA9A0EF2D87A0057205B /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0263BA990EF2D87A0057205B /* CalendarStore.framework */; };
 		027166800EF3761000B62633 /* Jarvis.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0271667F0EF3761000B62633 /* Jarvis.icns */; };
 		02A397F40EF2E23900D22B79 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A397F30EF2E23900D22B79 /* WebKit.framework */; };
 		02D6E63B0EF6C4630007BD01 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D6E63A0EF6C4630007BD01 /* SystemConfiguration.framework */; };
-		02DB3B5F0ECFEEDB00CBDC3A /* TextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DB3B5E0ECFEEDB00CBDC3A /* TextController.m */; };
+		02DB3B5F0ECFEEDB00CBDC3A /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DB3B5E0ECFEEDB00CBDC3A /* MainController.m */; };
 		02DB3B910ED003AF00CBDC3A /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DB3B900ED003AF00CBDC3A /* CoreServices.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -38,11 +46,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0014064714840AC100168F25 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		0014064914840E0600168F25 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		0014064A14840E0600168F25 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		001976901475820E003C43BE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		001976951475866C003C43BE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		002624FA14BE27DF000FEECB /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		005AA41C148404AC00D52CB8 /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		005AA41F1484053300D52CB8 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		005AA4201484053300D52CB8 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
+		008B298214D1CED400C0C68F /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog; sourceTree = "<group>"; };
 		008D3A2614769BB800D907BC /* Bugs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Bugs; path = ../Bugs; sourceTree = "<group>"; };
-		008D3A2714769BB800D907BC /* Changelog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Changelog; path = ../Changelog; sourceTree = "<group>"; };
 		008D3A2814769BB800D907BC /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TODO; path = ../TODO; sourceTree = "<group>"; };
+		00A2327514D1BDA900586744 /* ChangeLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeLogController.h; sourceTree = "<group>"; };
+		00A2327614D1BDA900586744 /* ChangeLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeLogController.m; sourceTree = "<group>"; };
+		00A2327814D1BDF300586744 /* ChangeLog.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangeLog.xib; sourceTree = "<group>"; };
 		00A32EF814790FEF00BC1EB2 /* JarvisHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = JarvisHelp; sourceTree = "<group>"; };
 		0227F9280F093CC700A75670 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
 		0263BA990EF2D87A0057205B /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = /System/Library/Frameworks/CalendarStore.framework; sourceTree = "<absolute>"; };
@@ -50,8 +68,8 @@
 		0284C2D70EF2DF6300ED044A /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A397F30EF2E23900D22B79 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		02D6E63A0EF6C4630007BD01 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = /System/Library/Frameworks/SystemConfiguration.framework; sourceTree = "<absolute>"; };
-		02DB3B5D0ECFEEDB00CBDC3A /* TextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextController.h; sourceTree = "<group>"; };
-		02DB3B5E0ECFEEDB00CBDC3A /* TextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextController.m; sourceTree = "<group>"; };
+		02DB3B5D0ECFEEDB00CBDC3A /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		02DB3B5E0ECFEEDB00CBDC3A /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		02DB3B900ED003AF00CBDC3A /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -85,6 +103,10 @@
 		008295C914347235000C13EC /* Other Resources */ = {
 			isa = PBXGroup;
 			children = (
+				008B298214D1CED400C0C68F /* Changelog */,
+				008D3A2614769BB800D907BC /* Bugs */,
+				008D3A2814769BB800D907BC /* TODO */,
+				002624FA14BE27DF000FEECB /* COPYING */,
 			);
 			name = "Other Resources";
 			sourceTree = "<group>";
@@ -92,8 +114,14 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				02DB3B5E0ECFEEDB00CBDC3A /* TextController.m */,
-				02DB3B5D0ECFEEDB00CBDC3A /* TextController.h */,
+				02DB3B5E0ECFEEDB00CBDC3A /* MainController.m */,
+				02DB3B5D0ECFEEDB00CBDC3A /* MainController.h */,
+				005AA41F1484053300D52CB8 /* AboutController.h */,
+				005AA4201484053300D52CB8 /* AboutController.m */,
+				0014064914840E0600168F25 /* PreferencesController.h */,
+				0014064A14840E0600168F25 /* PreferencesController.m */,
+				00A2327514D1BDA900586744 /* ChangeLogController.h */,
+				00A2327614D1BDA900586744 /* ChangeLogController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -154,9 +182,9 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				008D3A2614769BB800D907BC /* Bugs */,
-				008D3A2714769BB800D907BC /* Changelog */,
-				008D3A2814769BB800D907BC /* TODO */,
+				005AA41C148404AC00D52CB8 /* About.xib */,
+				0014064714840AC100168F25 /* Preferences.xib */,
+				00A2327814D1BDF300586744 /* ChangeLog.xib */,
 				00A32EF814790FEF00BC1EB2 /* JarvisHelp */,
 			);
 			name = Resources;
@@ -204,8 +232,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Jarvis" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -231,6 +262,11 @@
 				027166800EF3761000B62633 /* Jarvis.icns in Resources */,
 				001976961475866C003C43BE /* dsa_pub.pem in Resources */,
 				00A32EF914790FEF00BC1EB2 /* JarvisHelp in Resources */,
+				005AA41D148404AC00D52CB8 /* About.xib in Resources */,
+				0014064814840AC100168F25 /* Preferences.xib in Resources */,
+				002624FB14BE27DF000FEECB /* COPYING in Resources */,
+				00A2327914D1BDF300586744 /* ChangeLog.xib in Resources */,
+				008B298314D1CED400C0C68F /* Changelog in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				02DB3B5F0ECFEEDB00CBDC3A /* TextController.m in Sources */,
+				02DB3B5F0ECFEEDB00CBDC3A /* MainController.m in Sources */,
+				005AA4211484053300D52CB8 /* AboutController.m in Sources */,
+				0014064B14840E0600168F25 /* PreferencesController.m in Sources */,
+				00A2327714D1BDA900586744 /* ChangeLogController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +318,6 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -323,8 +361,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
+				PRODUCT_NAME = Jarvis;
 				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -338,7 +377,7 @@
 				INSTALL_PATH = /Applications;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
+				PRODUCT_NAME = Jarvis;
 				SDKROOT = macosx;
 			};
 			name = Release;
