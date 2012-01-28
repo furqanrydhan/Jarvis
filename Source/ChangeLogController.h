@@ -7,11 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <WebKit/WebKit.h>
 
 @interface ChangeLogController : NSWindowController {
-
-    IBOutlet NSTextView *fChangeLogView;
-    
+    IBOutlet WebView *fChangeLogWebView;
 }
+
+@property (nonatomic, retain) IBOutlet WebView *fChangeLogWebView;
 
 @end

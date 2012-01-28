@@ -70,4 +70,12 @@
     [fLicenseSheet orderOut: nil];
     [NSApp endSheet: fLicenseSheet];
 }
+
+- (IBAction)buttonMe:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"mailto:ulicigabriel@gmail.com?Subject=Jarvis%20Problem"]];
+}
+
+- (IBAction)buttonPhysicistjedi:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://physicistjedi.deviantart.com/"]];
+}
 @end

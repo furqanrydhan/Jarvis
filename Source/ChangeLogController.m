@@ -10,6 +10,8 @@
 
 @implementation ChangeLogController
 
+@synthesize fChangeLogWebView;
+
 - (id) init {
     
 	if ( ! (self = [super initWithWindowNibName: @"ChangeLog"]) ) {
@@ -21,13 +23,17 @@
 	return self;
 } // end init
 
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+}
+
 
 - (void) awakeFromNib
 {
-    NSString * changeText = [NSString stringWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"Changelog" ofType: nil]
-                                                   usedEncoding: nil error: NULL];
-    [fChangeLogView setString: changeText];
-
+ //   WebPreferences *prefs = [fChangeLogWebView preferences];
+//	[prefs _setLocalStorageDatabasePath:@"~/Library/Jarvis/LocalStorage"];
+	NSString *resourcesPath = [[NSBundle mainBundle] resourcePath];
+	NSString *htmlPath = [resourcesPath stringByAppendingString:@"/htdocs/relnotes.html"];
+	[[fChangeLogWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlPath]]];
 }
 
 - (void) windowDidLoad {
@@ -38,7 +44,8 @@
 
 - (void) windowWillClose: (id) sender
 {
-	//[fAboutBoxInstance release];
+	[NSApp terminate:self];
+    //[fAboutBoxInstance release];
     //fAboutBoxInstance = nil;
 }
 

@@ -21,5 +21,7 @@
 
 - (IBAction)showLicense:(id)sender;
 - (IBAction)hideLicense:(id)sender;
+- (IBAction)buttonMe:(id)sender;
+- (IBAction)buttonPhysicistjedi:(id)sender;
 
 @end

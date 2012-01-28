@@ -1148,7 +1148,7 @@
 			<object class="NSWindowTemplate" id="668684289">
 				<int key="NSWindowStyleMask">8221</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{462, 200}, {500, 500}}</string>
+				<string key="NSWindowRect">{{471, 229}, {500, 500}}</string>
 				<int key="NSWTFlags">-1543503872</int>
 				<string key="NSWindowTitle">Jarvis</string>
 				<string key="NSWindowClass">NSPanel</string>
@@ -1172,6 +1172,7 @@
 											<int key="NSvFlags">2322</int>
 											<string key="NSFrameSize">{501, 14}</string>
 											<reference key="NSSuperview" ref="703888488"/>
+											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="525292548"/>
 											<object class="NSTextContainer" key="NSTextContainer" id="191033428">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1239,6 +1240,7 @@
 									</array>
 									<string key="NSFrame">{{1, 1}, {501, 500}}</string>
 									<reference key="NSSuperview" ref="879145357"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="681682155"/>
 									<reference key="NSDocView" ref="681682155"/>
 									<object class="NSColor" key="NSBGColor">
@@ -1276,6 +1278,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {15, 396}}</string>
 									<reference key="NSSuperview" ref="879145357"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="1006829030"/>
 									<reference key="NSTarget" ref="879145357"/>
 									<string key="NSAction">_doScroller:</string>
@@ -1286,6 +1289,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {87, 18}}</string>
 									<reference key="NSSuperview" ref="879145357"/>
+									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="703888488"/>
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="879145357"/>
@@ -1296,6 +1300,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							</array>
 							<string key="NSFrame">{{-2, -1}, {503, 502}}</string>
 							<reference key="NSSuperview" ref="239660126"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="703888488"/>
 							<int key="NSsFlags">133634</int>
 							<reference key="NSVScroller" ref="525292548"/>
@@ -1315,6 +1320,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							</set>
 							<string key="NSFrame">{{374, 376}, {126, 104}}</string>
 							<reference key="NSSuperview" ref="239660126"/>
+							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="331014214"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="288006226">
@@ -1341,6 +1347,7 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 							<int key="NSvFlags">265</int>
 							<string key="NSFrame">{{400, 375}, {73, 106}}</string>
 							<reference key="NSSuperview" ref="239660126"/>
+							<reference key="NSWindow"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="335949687">
 								<int key="NSCellFlags">67239424</int>
@@ -1359,11 +1366,13 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 					</array>
 					<string key="NSFrameSize">{500, 500}</string>
 					<reference key="NSSuperview"/>
+					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="879145357"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMinSize">{300, 319}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
+				<int key="NSWindowCollectionBehavior">128</int>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
 			<object class="NSCustomObject" id="586618128">
