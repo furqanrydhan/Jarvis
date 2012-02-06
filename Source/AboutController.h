@@ -8,16 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-
 @interface AboutController : NSWindowController {
     IBOutlet NSTextField *jVersionField;
     IBOutlet NSTextView *fLicenseView;
     IBOutlet NSPanel *fLicenseSheet;
     IBOutlet NSButton *fLicenseCloseButton;
     IBOutlet NSButton *fLicenseButton;
+    IBOutlet NSButton *fContributorsButton;
+    IBOutlet NSPanel *fContributorsView;
+    IBOutlet NSWindow *fAboutView;
 }
 
-//+ (AboutController *) aboutController;
++ (AboutController *) aboutController;
 
 - (IBAction)showLicense:(id)sender;
 - (IBAction)hideLicense:(id)sender;

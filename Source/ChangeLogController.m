@@ -19,7 +19,6 @@
 		return nil;
 	} // end if
 	NSLog(@"init OK in ChangeLogController");
-	
 	return self;
 } // end init
 
@@ -29,6 +28,7 @@
 
 - (void) awakeFromNib
 {
+    [fChangeLogView makeKeyAndOrderFront:nil];
  //   WebPreferences *prefs = [fChangeLogWebView preferences];
 //	[prefs _setLocalStorageDatabasePath:@"~/Library/Jarvis/LocalStorage"];
 	NSString *resourcesPath = [[NSBundle mainBundle] resourcePath];

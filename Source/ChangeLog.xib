@@ -101,8 +101,8 @@
 			<object class="NSWindowTemplate" id="593491918">
 				<int key="NSWindowStyleMask">271</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{856, 451}, {526, 356}}</string>
-				<int key="NSWTFlags">611845120</int>
+				<string key="NSWindowRect">{{702, 333}, {526, 356}}</string>
+				<int key="NSWTFlags">-461896704</int>
 				<string key="NSWindowTitle">Change Log</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
@@ -136,7 +136,7 @@
 									<string>public.url-name</string>
 								</object>
 							</object>
-							<string key="NSFrame">{{9, 39}, {505, 312}}</string>
+							<string key="NSFrame">{{0, 36}, {526, 315}}</string>
 							<reference key="NSSuperview" ref="125651305"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -150,10 +150,9 @@
 						<object class="NSButton" id="728083962">
 							<reference key="NSNextResponder" ref="125651305"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{445, -1}, {75, 32}}</string>
+							<string key="NSFrame">{{451, 1}, {75, 32}}</string>
 							<reference key="NSSuperview" ref="125651305"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:687</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="638177474">
@@ -182,7 +181,7 @@
 					<reference key="NSNextKeyView" ref="311129385"/>
 					<string key="NSReuseIdentifierKey">_NS:224</string>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1280, 778}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
@@ -224,6 +223,14 @@
 						<reference key="destination" ref="593491918"/>
 					</object>
 					<int key="connectionID">53</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">fChangeLogView</string>
+						<reference key="source" ref="314401197"/>
+						<reference key="destination" ref="593491918"/>
+					</object>
+					<int key="connectionID">58</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -349,7 +356,7 @@
 				<reference key="dict.values" ref="1002"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">57</int>
+			<int key="maxID">58</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -358,14 +365,35 @@
 					<string key="className">ChangeLogController</string>
 					<string key="superclassName">NSWindowController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">fChangeLogWebView</string>
-						<string key="NS.object.0">WebView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>fChangeLogView</string>
+							<string>fChangeLogWebView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSWindow</string>
+							<string>WebView</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">fChangeLogWebView</string>
-						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">fChangeLogWebView</string>
-							<string key="candidateClassName">WebView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>fChangeLogView</string>
+							<string>fChangeLogWebView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">fChangeLogView</string>
+								<string key="candidateClassName">NSWindow</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">fChangeLogWebView</string>
+								<string key="candidateClassName">WebView</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">

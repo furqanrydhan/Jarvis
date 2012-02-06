@@ -1,9 +1,8 @@
 #import "MainController.h"
 
-
 NSSpeechSynthesizer *synth;
 
-@implementation TextController
+@implementation MainController
 - (IBAction)update:(id)sender;
 {
 	[synth stopSpeaking];
@@ -14,7 +13,16 @@ NSSpeechSynthesizer *synth;
 	[self jarvis];
 }
 
-- (IBAction)Homepage:(id)sender {
+- (BOOL) applicationShouldHandleReopen: (NSApplication *) app hasVisibleWindows: (BOOL) visibleWindows
+{
+    NSWindow * mainWindow = [NSApp mainWindow];
+    if (!mainWindow || ![mainWindow isVisible])
+       [fMainWindow makeKeyAndOrderFront: nil];
+    return NO;
+}
+
+- (IBAction)Homepage:(id)sender 
+{
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://gabrielulici.github.com/Jarvis/"]];
 }
 
@@ -22,58 +30,44 @@ NSSpeechSynthesizer *synth;
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"https://github.com/GabrielUlici/Jarvis/issues"]];
 }
 
-- (IBAction)ChangeLog:(id)sender {
-    
+- (IBAction)ChangeLog:(id)sender 
+{
     if (! myChangeLogController ) {
 		myChangeLogController	= [[ChangeLogController alloc] init];
 	} // end if
-	
-	[myChangeLogController showWindow:self];
-     
-    NSApplication *thisApp = [NSApplication sharedApplication];
-    [thisApp activateIgnoringOtherApps:YES];
     [[myChangeLogController window] makeKeyAndOrderFront:self];
-    
-    
 }
 
-- (IBAction)showTheWindow:(id)pId {
-
+- (IBAction)showTheWindow:(id)pId 
+{
+/*
 	if (! myAboutController ) {
 		myAboutController	= [[AboutController alloc] init];
 	} // end if
 	
 	[myAboutController showWindow:self];
-    
+ */
+    [[AboutController aboutController] showWindow: nil];
 }
 
 
-- (IBAction)showPreferencesWindows:(id)sender {
-    /*
-    NSWindow * window = [myPreferencesController window];
-    if (![window isVisible])
-        [window center];
-    
-    [window makeKeyAndOrderFront: nil];
-    */
-    
+- (IBAction)showPreferencesWindows:(id)sender 
+{
     if (! myPreferencesController ) {
 		myPreferencesController	= [[PreferencesController alloc] init];
 	} // end if
-	
 	[myPreferencesController showWindow:self];
-    
 }
 
 - (void)awakeFromNib
 {
+    [fMainWindow makeKeyAndOrderFront:self];
 	NSLog(@"I have indeed been uploaded, sir. We're online and ready.");
 	//[self setVolume:0.8];
-	
+
 	synth = [[NSSpeechSynthesizer alloc] init];
 	[self jarvis];
 }
-
 
 - (void)jarvis
 {	
@@ -143,7 +137,7 @@ NSSpeechSynthesizer *synth;
 			text= [text stringByAppendingString:@", at "];
 			NSCalendarDate *eventDate = [[[events objectAtIndex:i] startDate] dateWithCalendarFormat:nil timeZone:nil];
 			if([eventDate minuteOfHour]<10)
-				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
+				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:0%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
 			else
 				text = [text stringByAppendingString:[NSString stringWithFormat:@"%d:%d", [eventDate hourOfDay], [eventDate minuteOfHour]]];
 		}
@@ -383,10 +377,10 @@ NSSpeechSynthesizer *synth;
 	[window setFloatingPanel:NO];
 	[outText setTextColor:[NSColor colorWithDeviceWhite:0.95 alpha:1]];
 	[outText setString:text];
-	
 	[synth startSpeakingString:text];	//for speaking the text
 }
 
+/*
 //Copy-pasted from .arri
 //@ http://www.cocoadev.com/index.pl?SoundVolume
 - (void)setVolume:(float)involume {
@@ -431,6 +425,11 @@ NSSpeechSynthesizer *synth;
 	err = AudioDeviceSetProperty(device, 0, channels[1], false, kAudioDevicePropertyVolumeScalar, size, &involume);
 	if(noErr!=err) NSLog(@"error setting volume of channel %d",channels[1]);
 	
-}
+}*/
+
+- (void)windowDidLoad {
+	NSLog(@"MainPanel did load");
+   // [[self window] center];
+} // end windowDidLoad
 
 @end

@@ -10,6 +10,7 @@
 
 @interface PreferencesController : NSWindowController {
 @private
+    IBOutlet NSPanel *fPreferencesView;
     
 }
 

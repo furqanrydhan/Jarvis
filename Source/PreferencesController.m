@@ -23,7 +23,7 @@
 
 - (void) awakeFromNib
 {
-    
+    [fPreferencesView makeKeyAndOrderFront:nil];
 }
 
 - (void) windowDidLoad {

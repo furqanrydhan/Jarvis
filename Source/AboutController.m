@@ -8,8 +8,16 @@
 
 #import "AboutController.h"
 
-
 @implementation AboutController
+AboutController * fAboutBoxInstance = nil;
++ (AboutController *) aboutController
+{
+    if (!fAboutBoxInstance)
+        fAboutBoxInstance = [[self alloc] initWithWindowNibName: @"About"];
+    return fAboutBoxInstance;
+}
+
+/*
 - (id) init {
     
 	if ( ! (self = [super initWithWindowNibName: @"About"]) ) {
@@ -20,39 +28,35 @@
 	
 	return self;
 } // end init
-
+*/
 
 - (void) awakeFromNib
 {
-   
+    [fAboutView makeKeyAndOrderFront:nil];
     NSDictionary * info = [[NSBundle mainBundle] infoDictionary];
-    [jVersionField setStringValue: [NSString stringWithFormat: @"%@ (%@)",
-                                    [info objectForKey: @"CFBundleShortVersionString"], [info objectForKey: (NSString *)kCFBundleVersionKey]]];
-    
+    [jVersionField setStringValue: [NSString stringWithFormat: @"%@ (%@)", [info objectForKey: @"CFBundleShortVersionString"], [info objectForKey: (NSString *)kCFBundleVersionKey]]];
+
     //size license button
-    const CGFloat oldButtonWidth = NSWidth([fLicenseButton frame]);
-    
+    const CGFloat oldButtonWidth = NSWidth([fLicenseButton frame]);    
     [fLicenseButton setTitle: NSLocalizedString(@"License", "About window -> license button")];
     [fLicenseButton sizeToFit];
-    
     NSRect buttonFrame = [fLicenseButton frame];
     buttonFrame.size.width += 10.0;
     buttonFrame.origin.x -= NSWidth(buttonFrame) - oldButtonWidth;
     [fLicenseButton setFrame: buttonFrame];
- 
 }
-
-
-- (void) windowWillClose: (id) sender
-{
-	
-}
-
 
 - (void)windowDidLoad {
 	NSLog(@"AboutPanel did load");
     [[self window] center];
 } // end windowDidLoad
+
+- (void) windowWillClose: (id) sender
+{
+    [fAboutView close];
+    [fAboutBoxInstance release];
+    fAboutBoxInstance = nil;
+}
 
 - (IBAction)showLicense:(id)sender 
 {
@@ -62,7 +66,6 @@
     [fLicenseCloseButton setTitle: NSLocalizedString(@"OK", "About window -> license close button")];
 	
 	[NSApp beginSheet: fLicenseSheet modalForWindow: [self window] modalDelegate: nil didEndSelector: nil contextInfo: nil];
-    
 }
 
 - (IBAction)hideLicense:(id)sender 

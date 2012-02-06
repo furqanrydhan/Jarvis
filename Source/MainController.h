@@ -2,16 +2,19 @@
 #import <CoreServices/CoreServices.h>
 #import <CalendarStore/CalendarStore.h>
 #import <WebKit/WebKit.h>
+#import <AppKit/AppKit.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <CoreAudio/CoreAudio.h>
-#import "AboutController.h"
+#import <AudioToolbox/AudioServices.h>
 #import "PreferencesController.h"
 #import "ChangeLogController.h"
+#import "AboutController.h"
 
-@interface TextController : NSObject {
+@interface MainController : NSObject {
     IBOutlet id outText;
 	IBOutlet id window;
-    AboutController *myAboutController;
+    IBOutlet NSPanel *fMainWindow;
+//    AboutController *myAboutController;
     PreferencesController *myPreferencesController;
     ChangeLogController *myChangeLogController;
 }
@@ -22,9 +25,8 @@
 - (IBAction)ChangeLog:(id)sender;
 - (IBAction)showPreferencesWindows:(id)sender;
 - (void)jarvis;
-- (void)setVolume:(float)involume;
+//- (void)setVolume:(float)involume;
 - (IBAction)showTheWindow:(id)pId;
-
 
 @end
  

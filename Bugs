@@ -1,6 +1,6 @@
 Bug List
 
 1) Crashes if Mail app has no email setup. 
-2) Weather is not working beause of the change of the API
-3) Tracking is not working beause of the change of the API
-4)
+2) Weather is not working because of the change of the API
+3) Tracking is not working because of the change of the API
+4) when you close the About, Preference and the Change Log Panel…it will not reopen.

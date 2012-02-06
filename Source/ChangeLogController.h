@@ -11,6 +11,7 @@
 
 @interface ChangeLogController : NSWindowController {
     IBOutlet WebView *fChangeLogWebView;
+    IBOutlet NSWindow *fChangeLogView;
 }
 
 @property (nonatomic, retain) IBOutlet WebView *fChangeLogWebView;
