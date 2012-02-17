@@ -1,5 +1,8 @@
 A TODO list
 
+1) Change the name and the HUD window, make it a normal window textured in black.
+2) Add the donation window.
+
 a) Important/Urgent
 0) Find a new name for the application.
 1) fix the weather 
@@ -16,7 +19,7 @@ b) Features
 4) to sync the todo list with Dropbox/Sugar sync other Todo services
 5) the startup/logged in time (the total processes running, etc)
 6) if there are no iCal events or To Do`s then it will be written that there are non
-7)  
+7) add a search bar and the result should be in the same app(a new windows)
 8)
 
 c) Preferences panel
