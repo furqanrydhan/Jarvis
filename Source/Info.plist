@@ -40,8 +40,6 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUEnableSystemProfiling</key>
-	<string>NO</string>
 	<key>SUFeedURL</key>
 	<string>http://dl.dropbox.com/u/5765080/Jarvis/appcast.xml</string>
 	<key>SUPublicDSAKeyFile</key>
@@ -52,5 +50,11 @@
 	<array/>
 	<key>UTImportedTypeDeclarations</key>
 	<array/>
+	<key>SUEnableSystemProfiling</key>
+	<true/>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUScheduledCheckInterval</key>
+	<integer>86400</integer>
 </dict>
 </plist>

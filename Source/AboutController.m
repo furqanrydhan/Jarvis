@@ -17,19 +17,6 @@ AboutController * fAboutBoxInstance = nil;
     return fAboutBoxInstance;
 }
 
-/*
-- (id) init {
-    
-	if ( ! (self = [super initWithWindowNibName: @"About"]) ) {
-		NSLog(@"init failed in AboutController");
-		return nil;
-	} // end if
-	NSLog(@"init OK in AboutController");
-	
-	return self;
-} // end init
-*/
-
 - (void) awakeFromNib
 {
     [fAboutView makeKeyAndOrderFront:nil];

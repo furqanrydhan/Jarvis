@@ -3,18 +3,20 @@
 #import <CalendarStore/CalendarStore.h>
 #import <WebKit/WebKit.h>
 #import <AppKit/AppKit.h>
+#import <Quartz/Quartz.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <CoreAudio/CoreAudio.h>
 #import <AudioToolbox/AudioServices.h>
-#import "PreferencesController.h"
 #import "ChangeLogController.h"
 #import "AboutController.h"
+#import "PreferencesController.h"
 
 @interface MainController : NSObject {
+    NSUserDefaults * fDefaults;
+    BOOL fQuitRequested;
     IBOutlet id outText;
 	IBOutlet id window;
     IBOutlet NSPanel *fMainWindow;
-//    AboutController *myAboutController;
     PreferencesController *myPreferencesController;
     ChangeLogController *myChangeLogController;
 }
@@ -23,10 +25,12 @@
 - (IBAction)Homepage:(id)sender;
 - (IBAction)Issue:(id)sender;
 - (IBAction)ChangeLog:(id)sender;
-- (IBAction)showPreferencesWindows:(id)sender;
+- (IBAction)showTheWindow:(id)pId;
+- (IBAction)Donate:(id)sender;
+- (IBAction)showPreferencesWindow:(id)sender;
 - (void)jarvis;
 //- (void)setVolume:(float)involume;
-- (IBAction)showTheWindow:(id)pId;
 
 @end
  
+

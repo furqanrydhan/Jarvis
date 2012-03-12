@@ -29,8 +29,8 @@
 - (void) awakeFromNib
 {
     [fChangeLogView makeKeyAndOrderFront:nil];
- //   WebPreferences *prefs = [fChangeLogWebView preferences];
-//	[prefs _setLocalStorageDatabasePath:@"~/Library/Jarvis/LocalStorage"];
+   // WebPreferences *prefs = [fChangeLogWebView preferences];
+  //  [prefs _setLocalStorageDatabasePath:@"~/Library/Jarvis/LocalStorage"];
 	NSString *resourcesPath = [[NSBundle mainBundle] resourcePath];
 	NSString *htmlPath = [resourcesPath stringByAppendingString:@"/htdocs/relnotes.html"];
 	[[fChangeLogWebView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlPath]]];

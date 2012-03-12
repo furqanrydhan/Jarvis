@@ -1,8 +1,108 @@
 #import "MainController.h"
+#import <IOKit/IOMessage.h>
+#import <Sparkle/Sparkle.h>
 
+
+#define DONATE_URL  @"http://gabrielulici.github.com/Jarvis/donate.html"
+#define DONATE_NAG_TIME (60 * 60 * 24 * 7)
 NSSpeechSynthesizer *synth;
 
 @implementation MainController
+
++ (void) initialize
+{
+    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
+                                                              [[NSBundle mainBundle] pathForResource: @"Defaults" ofType: @"plist"]]];
+    
+    /*
+    //make sure another instance of the app isn't running already
+    BOOL othersRunning = NO;
+    
+    if ([NSApp isOnSnowLeopardOrBetter])
+    {
+        NSArray * apps = [NSRunningApplicationSL runningApplicationsWithBundleIdentifier: [[NSBundle mainBundle] bundleIdentifier]];
+        othersRunning = [apps count] > 1;
+    }
+    else
+    {
+        NSString * bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+        const int processIdentifier = [[NSProcessInfo processInfo] processIdentifier];
+        
+        for (NSDictionary * dic in [[NSWorkspace sharedWorkspace] launchedApplications])
+        {
+            if ([[dic objectForKey: @"NSApplicationBundleIdentifier"] isEqualToString: bundleIdentifier]
+                && [[dic objectForKey: @"NSApplicationProcessIdentifier"] intValue] != processIdentifier)
+                othersRunning = YES;
+        }
+    }
+    
+    if (othersRunning)
+    {
+        NSAlert * alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle: NSLocalizedString(@"Quit", "Jarvis already running alert -> button")];
+        [alert setMessageText: NSLocalizedString(@"Jarvis is already running.",
+                                                 "Jarvis already running alert -> title")];
+        [alert setInformativeText: NSLocalizedString(@"There is already a copy of Jarvis running. "
+                                                     "This copy cannot be opened until that instance is quit.", "Jarvis already running alert -> message")];
+        [alert setAlertStyle: NSCriticalAlertStyle];
+        
+        [alert runModal];
+        [alert release];
+        
+        //kill ourselves right away
+        exit(0);
+    }
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults: [NSDictionary dictionaryWithContentsOfFile:
+                                                              [[NSBundle mainBundle] pathForResource: @"Defaults" ofType: @"plist"]]];
+    
+    //set custom value transformers
+    ExpandedPathToPathTransformer * pathTransformer = [[[ExpandedPathToPathTransformer alloc] init] autorelease];
+    [NSValueTransformer setValueTransformer: pathTransformer forName: @"ExpandedPathToPathTransformer"];
+    
+    ExpandedPathToIconTransformer * iconTransformer = [[[ExpandedPathToIconTransformer alloc] init] autorelease];
+    [NSValueTransformer setValueTransformer: iconTransformer forName: @"ExpandedPathToIconTransformer"];
+    
+    //first message
+    if ([[NSUserDefaults standardUserDefaults] boolForKey: @"WarningInfo"])
+    {
+        NSAlert * alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle: NSLocalizedString(@"I Accept", "Info alert -> button")];
+        [alert addButtonWithTitle: NSLocalizedString(@"Quit", "Info alert -> button")];
+        [alert setMessageText: NSLocalizedString(@"Welcome to Jarvis", "Info alert -> title")];
+        [alert setInformativeText: NSLocalizedString(@"Jarvis is a personal assistent application."
+                                                     " bla bla.",
+                                                     "Info alert -> message")];
+        [alert setAlertStyle: NSInformationalAlertStyle];
+        
+        if ([alert runModal] == NSAlertSecondButtonReturn)
+            exit(0);
+        [alert release];
+        
+        [[NSUserDefaults standardUserDefaults] setBool: NO forKey: @"WarningInfo"];
+    }*/
+}
+
+- (id) init
+{
+    if ((self = [super init]))
+    {
+        fDefaults = [NSUserDefaults standardUserDefaults];
+        
+        //upgrading from old version clear recent items
+        [[NSDocumentController sharedDocumentController] clearRecentDocuments: nil];
+        
+        [NSApp setDelegate: self];
+        
+         myPreferencesController = [[PreferencesController alloc] init];
+        
+        [[SUUpdater sharedUpdater] setDelegate: self];
+        fQuitRequested = NO;
+        
+    }
+    return self;
+}
+
 - (IBAction)update:(id)sender;
 {
 	[synth stopSpeaking];
@@ -13,20 +113,13 @@ NSSpeechSynthesizer *synth;
 	[self jarvis];
 }
 
-- (BOOL) applicationShouldHandleReopen: (NSApplication *) app hasVisibleWindows: (BOOL) visibleWindows
-{
-    NSWindow * mainWindow = [NSApp mainWindow];
-    if (!mainWindow || ![mainWindow isVisible])
-       [fMainWindow makeKeyAndOrderFront: nil];
-    return NO;
-}
-
 - (IBAction)Homepage:(id)sender 
 {
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"http://gabrielulici.github.com/Jarvis/"]];
 }
 
-- (IBAction)Issue:(id)sender {
+- (IBAction)Issue:(id)sender 
+{
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: @"https://github.com/GabrielUlici/Jarvis/issues"]];
 }
 
@@ -40,23 +133,20 @@ NSSpeechSynthesizer *synth;
 
 - (IBAction)showTheWindow:(id)pId 
 {
-/*
-	if (! myAboutController ) {
-		myAboutController	= [[AboutController alloc] init];
-	} // end if
-	
-	[myAboutController showWindow:self];
- */
     [[AboutController aboutController] showWindow: nil];
 }
 
+- (IBAction)Donate:(id)sender 
+{
+        [self linkDonate: self];
+}
 
-- (IBAction)showPreferencesWindows:(id)sender 
+- (IBAction)showPreferencesWindow:(id)sender 
 {
     if (! myPreferencesController ) {
 		myPreferencesController	= [[PreferencesController alloc] init];
 	} // end if
-	[myPreferencesController showWindow:self];
+    [[myPreferencesController window] makeKeyAndOrderFront:self];
 }
 
 - (void)awakeFromNib
@@ -64,9 +154,80 @@ NSSpeechSynthesizer *synth;
     [fMainWindow makeKeyAndOrderFront:self];
 	NSLog(@"I have indeed been uploaded, sir. We're online and ready.");
 	//[self setVolume:0.8];
-
 	synth = [[NSSpeechSynthesizer alloc] init];
 	[self jarvis];
+}
+
+- (void) applicationDidFinishLaunching: (NSNotification *) notification
+{
+    [NSApp setServicesProvider: self];
+    
+    //register for dock icon drags (has to be in applicationDidFinishLaunching: to work)
+    [[NSAppleEventManager sharedAppleEventManager] setEventHandler: self andSelector: @selector(handleOpenContentsEvent:replyEvent:)
+                                                     forEventClass: kCoreEventClass andEventID: kAEOpenContents];
+    //shamelessly ask for donations
+    if ([fDefaults boolForKey: @"WarningDonate"])
+    {
+        const BOOL firstLaunch = [fDefaults boolForKey: @"FirstLaunch"];
+        
+        NSDate * lastDonateDate = [fDefaults objectForKey: @"DonateAskDate"];
+        const BOOL timePassed = !lastDonateDate || (-1 * [lastDonateDate timeIntervalSinceNow]) >= DONATE_NAG_TIME;
+        
+        if (!firstLaunch && timePassed)
+        {
+            [fDefaults setObject: [NSDate date] forKey: @"DonateAskDate"];
+            
+            NSAlert * alert = [[NSAlert alloc] init];
+            [alert setMessageText: NSLocalizedString(@"Support open-source indie software", "Donation beg -> title")];
+            
+            NSString * donateMessage = [NSString stringWithFormat: @"%@\n\n%@",
+                                        NSLocalizedString(@"Jarvis is a personal assistent application."
+                                                          " A lot of time and effort have gone into development, coding, and refinement."
+                                                          " If you enjoy using it, please consider showing your love with a donation.", "Donation beg -> message"),
+                                        NSLocalizedString(@"Donate or not, there will be no difference to your experience.", "Donation beg -> message")];
+            
+            [alert setInformativeText: donateMessage];
+            [alert setAlertStyle: NSInformationalAlertStyle];
+            
+            [alert addButtonWithTitle: NSLocalizedString(@"Donate", "Donation beg -> button")];
+            NSButton * noDonateButton = [alert addButtonWithTitle: NSLocalizedString(@"Nope", "Donation beg -> button")];
+            [noDonateButton setKeyEquivalent: @"\e"]; //escape key
+            
+            const BOOL allowNeverAgain = lastDonateDate != nil; //hide the "don't show again" check the first time - give them time to try the app
+            [alert setShowsSuppressionButton: allowNeverAgain];
+            if (allowNeverAgain)
+                [[alert suppressionButton] setTitle: NSLocalizedString(@"Don't bug me about this ever again.", "Donation beg -> button")];
+            
+            const NSInteger donateResult = [alert runModal];
+            if (donateResult == NSAlertFirstButtonReturn)
+                [self linkDonate: self];
+            
+            if (allowNeverAgain)
+                [fDefaults setBool: ([[alert suppressionButton] state] != NSOnState) forKey: @"WarningDonate"];
+            
+            [alert release];
+            [fDefaults setBool: NO forKey: @"FirstLaunch"];
+        }
+    }
+}
+
+- (BOOL) applicationShouldHandleReopen: (NSApplication *) app hasVisibleWindows: (BOOL) visibleWindows
+{
+    NSWindow * mainWindow = [NSApp mainWindow];
+    if (!mainWindow || ![mainWindow isVisible])
+        [fMainWindow makeKeyAndOrderFront: nil];
+    
+    return NO;
+}
+
+- (void) showMainWindow: (id) sender
+{
+    [fMainWindow makeKeyAndOrderFront: nil];
+}
+
+- (void) linkDonate: (id) sender
+{
+    [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString: DONATE_URL]];
 }
 
 - (void)jarvis
@@ -427,7 +588,8 @@ NSSpeechSynthesizer *synth;
 	
 }*/
 
-- (void)windowDidLoad {
+- (void)windowDidLoad 
+{
 	NSLog(@"MainPanel did load");
    // [[self window] center];
 } // end windowDidLoad
