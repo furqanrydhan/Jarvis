@@ -515,7 +515,7 @@ NSSpeechSynthesizer *synth;
 		text = [text stringByAppendingString:@"\nToday's Headlines from NYTimes:\n"];
 		text = [text stringByAppendingString:[[[[quoteContent1 componentsSeparatedByString:@"<title>"] objectAtIndex:3] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
         //text = [text stringByAppendingString:[[[[quoteContent componentsSeparatedByString:@"<link>"] objectAtIndex:3] componentsSeparatedByString:@"</link>"] objectAtIndex:0]];
-		text = [text stringByAppendingString:@"\n"];
+		text = [text stringByAppendingString:@".\n"];
 		text = [text stringByAppendingString:[[[[quoteContent1 componentsSeparatedByString:@"<title>"] objectAtIndex:4] componentsSeparatedByString:@"</title>"] objectAtIndex:0]];
 		text = [text stringByAppendingString:@".\n"];
 	}
